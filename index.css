@@ -1,0 +1,362 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+
+:root {
+  --vermelho: #e63946;
+  --rosa: #f8c8dc;
+  --branco: #fff;
+  --cinza-claro: #f7f7f7;
+  --escuro: #2b2d42;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cinza-claro);
+  color: var(--escuro);
+}
+
+header {
+  background-color: var(--vermelho);
+  padding: 20px;
+  color: var(--branco);
+  text-align: center;
+}
+
+nav a {
+  color: var(--branco);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--branco);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+footer {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+html, body {
+  height: 100%;
+}
+
+#site-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.heart {
+  width: 50px;
+  height: 45px;
+  background-color: #ff4d6d;
+  position: relative;
+  animation: pulse 1s infinite;
+  transform: rotate(-45deg);
+  margin-bottom: 20px;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 50px;
+  height: 45px;
+  background-color: #ff4d6d;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart::after {
+  left: 25px;
+  top: 0;
+}
+
+#login-container {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff6b6b, #ff8e72, #ffa3a3, #ff6b81);
+  background-size: 400% 400%;
+  animation: fundoAnimado 15s ease infinite;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+#login-container input {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+#login-container button {
+  background-color: #e63946; /* cor mais viva */
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+#login-container button:hover {
+  background-color: #e63946;
+  color: white;
+}
+
+#erro {
+  margin-top: 15px;
+  color: #f8d7da;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+
+#typewriter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 30px;
+  margin-bottom: 20px;
+}
+
+.floating-heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  transform: rotate(45deg);
+  animation: floatHeart 6s linear infinite;
+  opacity: 0.8;
+}
+
+.floating-heart::before,
+.floating-heart::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.floating-heart::before {
+  top: -7.5px;
+  left: 0;
+}
+
+.floating-heart::after {
+  left: -7.5px;
+  top: 0;
+}
+
+/* Área principal ocupa toda a altura da tela */
+.area-principal {
+  min-height: 100vh; /* garante altura total da tela */
+  background-color: #e83e3e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.titulo-romantico {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8em;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.foto-casal img {
+  width: 90%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.foto-casal img:hover {
+  transform: scale(1.05);
+}
+
+.mensagem-amor {
+  color: #fffbea;
+  font-size: 1.2em;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.nav-romantica a {
+  display: inline-block;
+  margin: 10px 12px;
+  padding: 12px 24px;
+  background-color: white;
+  color: #ff0000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+.nav-romantica a:hover {
+  background-color: #ffe0ec;
+  transform: translateY(-3px);
+}
+
+/* ✨ Fade-in para frase */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.frase-romantica {
+  color: #ffeef2;
+  font-size: 1.4em;
+  font-style: italic;
+  margin-top: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ✨ Brilho no botão */
+#login-container button {
+  position: relative;
+  overflow: hidden;
+}
+
+#login-container button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+#login-container button:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ✨ Corações com rotação suave */
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scale(0.7) rotate(180deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fundoAnimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+

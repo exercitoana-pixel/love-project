@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="shortcut icon" type="image/png" href="img/vida.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa História</title>
+  <link rel="stylesheet" href="estilo1/index.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #e63946;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5em;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .historia {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .foto-casal img {
+      width: 90%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .foto-casal img:hover {
+      transform: scale(1.05);
+    }
+
+    .mensagem-amor {
+      color: #333;
+      font-size: 1.2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background-color: #e63946;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-family: 'Pacifico', cursive;
+      margin-top: 40px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .foto-casal img {
+        max-width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .mensagem-amor {
+        font-size: 1.1em;
+        padding: 0 10px;
+      }
+    }
+
+    /* Efeito fade-in para a mensagem */
+    .mensagem-amor {
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Estilos do botão de música */
+    #music-toggle {
+      background-color: #e63946;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      margin: 20px auto;
+      display: block;
+    }
+
+    #music-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #e63946;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 14px rgba(198, 40, 40, 0.9);
+      transition: background 0.3s, transform 0.3s;
+      z-index: 1500;
+    }
+
+    #scrollTopBtn:hover {
+      background: #ff4d6d;
+      transform: scale(1.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nossa História 💑</h1>
+    <nav>
+      <a href="historia.html">Nossa História</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="mensagens.html">Mensagens</a>
+    </nav>
+  </header>
+
+  <!-- Reprodutor de música invisível -->
+<audio id="bg-music" loop>
+  <source src="audio/audio.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Botão para controlar a música -->
+<button id="music-toggle">🎵 Tocar Música</button>
+
+
+  <main class="historia">
+    <div class="foto-casal">
+      <img src="img/amor.jpg" alt="Nós, o começo da nossa história" />
+    </div>
+    <p class="mensagem-amor">
+      Quando nos conhecemos, eu não sabia que estava prestes a começar uma das maiores jornadas da minha vida. Às vezes, a vida nos apresenta algo inesperado, algo que muda o curso de tudo o que conhecemos, e assim foi. O primeiro olhar que trocamos, os primeiros sorrisos tímidos e a forma como nos sentimos à vontade um com o outro logo no início são lembranças que nunca vou esquecer. Foi uma conexão tão instantânea que parecia até mágica.
+    </p>
+
+    <p class="mensagem-amor">
+      A princípio, não sabia que você se tornaria o meu refúgio, minha calmaria no meio de tantas incertezas. À medida que nos conhecíamos melhor, as conversas começaram a fluir de uma maneira que nunca havia experimentado antes. Conversávamos sobre tudo e sobre nada ao mesmo tempo, com uma naturalidade que só você e eu conseguimos entender. Sua risada, seu jeito único de ver o mundo, e a maneira como você me fazia sentir acolhida foram os pequenos detalhes que fizeram meu coração se apaixonar dia após dia.
+    </p>
+
+    <p class="mensagem-amor">
+      E então, chegou o momento em que nossos corações se entrelaçaram, sem pressa, mas com a certeza de que estávamos construindo algo sólido. Como duas almas que, apesar de serem diferentes, se encontraram para complementar uma à outra. Era como se o universo tivesse nos colocado no mesmo caminho, por um motivo que ainda não sabíamos, mas que agora, olhando para trás, é tão claro.
+    </p>
+
+    <p class="mensagem-amor">
+      Lembro de quando começamos a dividir os nossos sonhos, nossas inquietações e medos. Eu vi você vulnerável e ao mesmo tempo tão forte, e essa combinação me encantou. Percebi que um amor assim não era algo superficial. Ele estava enraizado na amizade, no respeito mútuo e na vontade de crescer juntos. Não tínhamos pressa. Cada passo foi dado com intenção, e isso me fez perceber que a base do nosso relacionamento não era só o desejo, mas a confiança e o apoio constante um do outro.
+    </p>
+
+    <p class="mensagem-amor">
+      Nossos primeiros desafios foram pequenos testes que a vida nos deu, mas em nenhum momento pensei em desistir. Como sempre, você esteve ao meu lado, me apoiando em cada decisão, e juntos conseguimos superar os obstáculos. Nos momentos de dificuldade, encontramos força no amor que construímos e na certeza de que nada nos separaria. Cada adversidade, na verdade, foi uma oportunidade para nos aproximarmos ainda mais e entender melhor o que significa estar ao lado de alguém para o que der e vier.
+    </p>
+
+    <p class="mensagem-amor">
+      E assim, a nossa história foi se desenrolando. Juntos, compartilhamos aventuras incríveis e simples, como aquelas tardes preguiçosas em que ficávamos apenas olhando para o nada, em silêncio, mas com uma felicidade imensa. Com você, aprendi que o amor não é apenas sobre palavras, mas sobre as ações diárias, sobre estar presente nos momentos de alegria e nos de dificuldade.
+    </p>
+
+    <p class="mensagem-amor">
+      Hoje, ao olhar para tudo o que vivemos até aqui, sinto uma imensa gratidão por cada momento, cada risada, cada abraço apertado. O mais bonito de tudo é que, ao lado de você, eu me tornei a melhor versão de mim mesma. A sua paciência, sua dedicação e o seu carinho me ensinaram a ser uma pessoa mais forte, mais compreensiva e mais amorosa. Eu nunca imaginei que pudesse viver um amor tão profundo e genuíno. Cada dia ao seu lado é uma nova aventura, uma nova página da nossa história que estamos escrevendo juntos.
+    </p>
+
+    <p class="mensagem-amor">
+      E o que me faz ter certeza de que nossa história é única e imbatível é o fato de que, independentemente do que o futuro nos traga, sei que estaremos juntos. Cada dia, cada momento, é uma nova oportunidade para continuar a construir o que temos. O amor que temos é forte e será capaz de resistir ao tempo, porque ele é verdadeiro, ele é nosso.
+    </p>
+
+    <p class="mensagem-amor">
+      Eu te amo, mais do que as palavras podem expressar. E sei que, juntos, continuaremos a escrever nossa história, um capítulo de cada vez, com a certeza de que somos feitos um para o outro.
+    </p>
+    
+  </main>
+
+  <footer>
+    Feito com amor pela sua princesa Ana 💌
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Voltar ao topo">↑</button>
+
+  <script>
+    // Botão de subir ao topo
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    scrollBtn.addEventListener('click', scrollToTop);
+
+    // Controle de música
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('music-toggle');
+    let isPlaying = false;
+
+    toggleBtn.addEventListener('click', () => {
+      if (!isPlaying) {
+        music.play();
+        toggleBtn.textContent = '⏸️ Pausar Música';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+      } else {
+        music.pause();
+        toggleBtn.textContent = '🎵 Tocar Música';
+        toggleBtn.setAttribute('aria-pressed', 'false');
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
+</body>
+</html>

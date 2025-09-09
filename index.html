@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="shortcut icon" type="image/png" href="img/vida.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso cantinho! 💖</title>
+  <link rel="stylesheet" href="estilo1/index.css" />
+</head>
+<body>
+
+  <!-- Tela de login -->
+  <div id="login-container">
+    <div id="floating-container"></div>
+
+    <div class="heart"></div>
+    <div id="typewriter"></div>
+    <h2>Digite a senha do nosso amor </h2>
+    <input type="password" id="senha" placeholder="Senha" />
+    <button onclick="verificarSenha()">Entrar</button>
+    <div id="erro"></div>
+
+    <!-- 💌 Frase romântica adicionada -->
+    <p class="frase-romantica fade-in">"Você é a senha do meu coração 💖"</p>
+  </div>
+
+  <!-- Conteúdo do site (oculto inicialmente) -->
+  <div id="site-content" style="display: none;">
+    <header class="area-principal">
+      <h1 class="titulo-romantico">Próxima etapa 💞</h1>
+  
+      <div class="foto-casal">
+        <img src="img/selfie.jpeg" alt="Foto nossa" />
+      </div>
+  
+      <p class="mensagem-amor">Cada clique é um passo na nossa história. Vamos reviver tudo juntinhos? 💑✨</p>
+  
+      <nav class="nav-romantica">
+        <button onclick="irParaHistoria()" class="btn-ir-historia">Início</button>
+      </nav>
+          
+    </header>
+  </div>     
+
+  <script>
+    function verificarSenha() {
+      const senhaCorreta = "2606";
+      const senhaDigitada = document.getElementById('senha').value.trim();
+      const erroDiv = document.getElementById('erro');
+
+      if (senhaDigitada === senhaCorreta) {
+        window.location.href = "historia.html";  // Redireciona para a página historia.html
+      } else {
+        erroDiv.textContent = 'Senha incorreta! Tente novamente.';
+        erroDiv.style.animation = 'shake 0.3s ease';
+        setTimeout(() => erroDiv.style.animation = '', 300);
+      }
+    }
+
+    document.getElementById('senha').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        verificarSenha();
+      }
+    });
+
+    // Efeito de digitação
+    const frase = "Bem-vindo ao nosso cantinho do amor ❤️";
+    let i = 0;
+    function digitar() {
+      if (i < frase.length) {
+        document.getElementById("typewriter").innerHTML += frase.charAt(i);
+        i++;
+        setTimeout(digitar, 70);
+      }
+    }
+    digitar();
+
+    // Criar corações flutuantes
+    function criarCoracao() {
+      const heart = document.createElement("div");
+      heart.classList.add("floating-heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.getElementById("floating-container").appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(criarCoracao, 300);
+  </script>
+
+</body>
+</html>
