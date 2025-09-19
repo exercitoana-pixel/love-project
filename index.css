@@ -64,7 +64,7 @@ footer {
   font-size: 0.9em;
 }
 
-.galeria img {
+.galeria {
   width: 100%;
   max-width: 250px;
   margin: 10px;
@@ -252,7 +252,7 @@ main {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.foto-casal img {
+.foto-casal {
   width: 90%;
   max-width: 250px;
   height: auto;
@@ -261,7 +261,7 @@ main {
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
 }
-.foto-casal img:hover {
+.foto-casal:hover {
   transform: scale(1.05);
 }
 
@@ -357,6 +357,7 @@ main {
     background-position: 0% 50%;
   }
 }
+
 
 
 
